@@ -9,8 +9,8 @@ public class CustomHealthIndicator extends AbstractHealthIndicator {
 
 	@Override
 	protected void doHealthCheck(Builder builder) throws Exception {
-		//builder.up().withDetail("status", true);
-		builder.down().withDetail("status", false);
+		builder.up().withDetail("status", true);
+		//builder.down().withDetail("status", false);
 	}
 
 }

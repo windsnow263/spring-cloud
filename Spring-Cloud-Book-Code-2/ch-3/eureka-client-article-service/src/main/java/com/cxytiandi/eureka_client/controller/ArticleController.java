@@ -25,11 +25,15 @@ public class ArticleController {
 		return eurekaClient.getInstancesByVipAddress("eureka-client-user-service", false);
 		//return discoveryClient.getInstances("eureka-client-user-service");     
 	}
-
+	
+	/**
+	 * 在BeanConfiguration增加@LoadBalanced后就失效了
+	 * @return
+	 */
 	@GetMapping("/article/callHello") 	
 	public String callHello() { 		
 	    return restTemplate.getForObject(
-			"http://localhost:8081/user/hello", String.class); 	
+			"http://localhost:8083/user/hello", String.class); 	
 	}
 	
 	@GetMapping("/article/callHello2") 	
