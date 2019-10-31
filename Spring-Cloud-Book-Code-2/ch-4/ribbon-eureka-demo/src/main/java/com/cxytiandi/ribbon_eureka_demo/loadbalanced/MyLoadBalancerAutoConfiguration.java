@@ -23,7 +23,7 @@ public class MyLoadBalancerAutoConfiguration {
 	public MyLoadBalancerInterceptor myLoadBalancerInterceptor(LoadBalancerClient loadBalancerClient,
 			LoadBalancerRequestFactory requestFactory) {
 		return new MyLoadBalancerInterceptor(loadBalancerClient,requestFactory);
-	}
+	};
 
 	@Bean
 	public SmartInitializingSingleton myLoadBalancedRestTemplateInitializer(LoadBalancerClient loadBalancerClient,

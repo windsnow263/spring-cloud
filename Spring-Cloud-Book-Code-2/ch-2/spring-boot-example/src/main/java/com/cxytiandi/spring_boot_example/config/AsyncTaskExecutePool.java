@@ -18,7 +18,8 @@ public class AsyncTaskExecutePool implements AsyncConfigurer {
 	
 	@Autowired
 	private TaskThreadPoolConfig config;
-
+	
+	@Autowired
 	public Executor getAsyncExecutor() {
 		ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
 		executor.setCorePoolSize(config.getCorePoolSize());
